@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
+import { Providers } from './providers';
 import './globals.css';
 
 const geistSans = localFont({
@@ -29,7 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-surface text-foreground`}
       >
+        <Providers>
           <main className="min-h-screen bg-surface">{children}</main>
+        </Providers>
       </body>
     </html>
   );
