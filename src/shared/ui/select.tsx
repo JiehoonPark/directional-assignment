@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import * as SelectPrimitive from '@radix-ui/react-select';
 

@@ -1,3 +1,5 @@
+'use client';
+
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { postApi, PostQueryParams } from '@/entities/post';
@@ -29,7 +31,7 @@ export function usePostsInfiniteQuery({
         nextCursor: pageParam ?? undefined,
       }),
     initialPageParam: undefined as string | undefined,
-    getNextPageParam: (lastPage) => lastPage.nextCursor ?? undefined,
-    getPreviousPageParam: (lastPage) => lastPage.prevCursor ?? undefined,
+    getNextPageParam: (lastPage) => lastPage?.nextCursor ?? undefined,
+    getPreviousPageParam: (lastPage) => lastPage?.prevCursor ?? undefined,
   });
 }

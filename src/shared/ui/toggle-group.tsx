@@ -1,3 +1,5 @@
+'use client';
+
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
 
 type ToggleGroupProps = ToggleGroupPrimitive.ToggleGroupSingleProps & {

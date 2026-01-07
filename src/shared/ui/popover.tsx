@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+
 import * as PopoverPrimitive from '@radix-ui/react-popover';
 
 type PopoverProps = React.PropsWithChildren<{
