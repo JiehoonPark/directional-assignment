@@ -1,1 +1,2 @@
-export * from './httpClient';
+export { httpRequest } from './httpClient';
+export type { HttpMethod } from './httpClient';
