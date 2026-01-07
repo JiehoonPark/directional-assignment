@@ -39,7 +39,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         ref={ref}
-        className={`inline-flex items-center justify-center gap-2 rounded-md transition-colors disabled:opacity-60 disabled:cursor-not-allowed ${sizeClass[size]} ${variantClass[variant]} ${className}`}
+        className={`inline-flex items-center justify-center gap-2 rounded-md cursor-pointer transition-colors disabled:opacity-60 disabled:cursor-not-allowed ${sizeClass[size]} ${variantClass[variant]} ${className}`}
         {...props}
       />
     );
