@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
+import { LoginDialogContainer } from '@/features/auth';
 import { GlobalNav } from '@/widgets/global-nav';
 import { Providers } from './providers';
 import './globals.css';
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Providers>
           <div className="min-h-screen bg-surface text-foreground flex flex-col">
             <GlobalNav />
+            <LoginDialogContainer />
             <main className="flex-1 min-h-0 bg-surface">{children}</main>
           </div>
         </Providers>

@@ -7,7 +7,6 @@ import { Button } from '@/shared/ui/button';
 import { Dialog } from '@/shared/ui/dialog';
 import { Section } from '@/shared/ui/section';
 
-import { LoginDialog } from '@/features/auth';
 import { PostToolbar } from './PostToolbar';
 import { PostsBoardFilters } from './PostsBoardFilters';
 import { PostsBoardTable } from './PostsBoardTable';
@@ -74,26 +73,6 @@ function PostsBoardContent() {
           </div>
         </PostTableProvider>
       </Section>
-
-      <LoginDialog
-        open={board.authState.isLoginOpen}
-        onClose={board.authState.closeLogin}
-        email={board.authState.loginForm.email}
-        password={board.authState.loginForm.password}
-        onEmailChange={(value) =>
-          board.authState.setLoginForm((previousForm) => ({ ...previousForm, email: value }))
-        }
-        onPasswordChange={(value) =>
-          board.authState.setLoginForm((previousForm) => ({ ...previousForm, password: value }))
-        }
-        onSubmit={board.authState.login}
-        isSubmitting={board.authState.loginMutation.isPending}
-        errorMessage={
-          board.authState.loginMutation.isError
-            ? (board.authState.loginMutation.error as Error)?.message ?? '확인해주세요'
-            : undefined
-        }
-      />
 
       <Dialog
         open={ui.isDeleteAllOpen}

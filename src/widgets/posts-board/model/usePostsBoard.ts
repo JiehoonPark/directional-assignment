@@ -50,14 +50,7 @@ export function usePostsBoard({ initialDataSource, initialFilters }: UsePostsBoa
     authState: {
       token: authState.token,
       isHydrated: authState.isHydrated,
-      loginForm: authState.loginForm,
-      setLoginForm: authState.setLoginForm,
-      isLoginOpen: authState.isLoginOpen,
       openLogin: authState.openLogin,
-      closeLogin: authState.closeLogin,
-      login: authState.login,
-      logout: authState.logout,
-      loginMutation: authState.loginMutation,
     },
     filtersState: {
       filters,

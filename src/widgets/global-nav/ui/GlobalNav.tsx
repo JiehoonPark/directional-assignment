@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 import { useAuthSession, useLoginModal } from '@/features/auth';
 import { Button } from '@/shared/ui/button';
@@ -13,15 +13,11 @@ const NAV_ITEMS = [
 
 export function GlobalNav() {
   const pathname = usePathname() ?? '';
-  const router = useRouter();
   const { isLoggedIn, logout, isHydrated } = useAuthSession();
   const { open: openLogin } = useLoginModal();
 
   const handleLoginClick = () => {
     openLogin();
-    if (!pathname.startsWith('/posts')) {
-      router.push('/posts');
-    }
   };
 
   return (
