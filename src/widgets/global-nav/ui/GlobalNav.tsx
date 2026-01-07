@@ -49,7 +49,7 @@ export function GlobalNav() {
         </div>
         {isHydrated ? (
           isLoggedIn ? (
-            <Button variant="ghost" size="sm" onClick={logout}>
+            <Button variant="secondary" size="sm" onClick={logout}>
               로그아웃
             </Button>
           ) : (

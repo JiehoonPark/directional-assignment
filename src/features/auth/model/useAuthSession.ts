@@ -13,6 +13,7 @@ export function useAuthSession() {
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
+    // SSR/CSR 불일치 방지를 위해 클라이언트 하이드레이션 이후 토큰을 사용
     setIsHydrated(true);
   }, []);
 
