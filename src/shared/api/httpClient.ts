@@ -31,7 +31,17 @@ export async function httpRequest<TResponse>(
   });
 
   if (!response.ok) {
-    throw new Error(response.statusText);
+    let message = response.statusText || '요청이 실패했습니다.';
+    try {
+      const errorBody = await response.json();
+      const rawMessage = errorBody?.message;
+      if (typeof rawMessage === 'string') {
+        message = rawMessage;
+      }
+    } catch {
+      // ...
+    }
+    throw new Error(message);
   }
 
   if (response.status === 204) {
