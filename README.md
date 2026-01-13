@@ -1,5 +1,5 @@
 # 배포 주소
-https://directional-assignment-7vhk-nta5ca4ld-jiehoonparks-projects.vercel.app/posts
+https://directional-assignment-7vhk.vercel.app/posts
 
 
 ## 프로젝트 실행 방법
